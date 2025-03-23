@@ -2,13 +2,13 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open("app-cache").then((cache) => {
       return cache.addAll([
-        "/index.html",
+        "/sandubalho/index.html",
         "/pedidos.html",
-        "/manifest.json",
-        "/css/styles.css",
-        "/js/scripts.js",
-        "/img/icons/image512x512.png",
-        "/img/icons/image192x192.png"
+        "/sandubalho/manifest.json",
+        "/sandubalho/css/styles.css",
+        "/sandubalho/js/scripts.js",
+        "/sandubalho/img/icons/image512x512.png",
+        "/sandubalho/img/icons/image192x192.png"
       ]);
     })
   );
