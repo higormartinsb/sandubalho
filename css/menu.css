@@ -1,0 +1,150 @@
+:root {
+    --color-primary-1: #fff9ea;
+    --color-primary-2: #ffe8b4;
+    --color-primary-3: #f8d477;
+    --color-primary-4: #ffe100;
+    --color-primary-5: #ffcb45;
+    --color-primary-6: #e9a209;
+
+    --color-neutral-0: #fff;
+    --color-neutral-1: #1d1d1d;
+}
+
+/* Estilização do menu */
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    margin: auto;
+}
+
+#dishes {
+    display: grid;
+    gap: 20px; /* Espaço entre os cards */
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); /* Define o layout de colunas flexíveis */
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+}
+
+.dish {
+    display: flex; /* Usando flexbox para alinhar a imagem e o conteúdo */
+    box-sizing: border-box;
+    margin: 15px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid #f2f2f2;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-between; /* Distribui os itens, com o conteúdo à direita e a imagem à esquerda */
+    height: 200px;
+}
+
+.product-image {
+    width: 60px !important;
+    height: 60px !important;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 16px; /* Espaço entre a imagem e o texto */
+}
+
+.product-title {
+    font-size: 14px !important;
+    color: #333;
+}
+
+.dish-description {
+    margin-top: 2px; /* Ajuste o espaçamento entre o título e a descrição */
+    font-size: 0.875rem;
+    color: #666;
+    width: auto !important;
+}
+
+.dish-description p {
+    margin: 4px 0;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.dish-heart {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dish-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    margin-bottom: 20px; /* Espaço entre a descrição e o botão */
+}
+
+.dish-rate {
+    margin-top: -5px;
+    font-size: 0.9rem;
+    color: var(--color-primary-6);
+}
+
+.dish-price {
+    font-size: 0.9rem;
+    margin-bottom: 10px; /* Espaço entre o preço e o botão */
+    display: flex;
+    justify-content: flex-end; /* Alinha o preço à direita */
+    text-align: right;
+}
+
+.product-price {
+    font-size: 20px;
+}
+
+.button-hover-background {
+    align-self: flex-start; /* Alinha o botão à esquerda */
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    margin-top: auto; /* Espaço entre o preço e o botão */
+    background: var(--color-primary-5) !important;
+}
+
+/* Responsividade */
+@media screen and (max-width: 1170px) {
+    #dishes {
+        grid-template-columns: repeat(2, 1fr); /* Garante 2 cards por linha até 1170px */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #dishes {
+        grid-template-columns: 1fr; /* 1 card por linha em dispositivos móveis */
+    }
+
+    .dish {
+        width: 100%; /* Ajusta a largura do card em telas menores */
+        padding: 15px;
+    }
+
+    .product-image {
+        margin-right: 0; /* Remove o espaço à direita da imagem em telas menores */
+        margin-bottom: 12px; /* Adiciona um espaço entre a imagem e o texto */
+    }
+
+    .dish-price {
+        margin-bottom: 10px; /* Garante que o preço e o botão fiquem próximos em telas pequenas */
+        align-self: flex-start; /* Garante que o preço fique à esquerda */
+    }
+
+    .button-hover-background {
+        margin-top: 12px; /* Garante o espaçamento entre o preço e o botão */
+        width: 100%; /* Torna o botão mais largo, ocupando toda a largura disponível */
+    }
+}

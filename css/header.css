@@ -1,0 +1,240 @@
+header {
+    width: 100%;
+    padding: 28px 8%;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-primary-1);
+    z-index: 3;
+}
+
+#navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+#nav_logo {
+    width: 400px;
+    font-size: 24px;
+    color: var(--color-primary-6);
+    font-family: 'Lobster', cursive;
+
+}
+
+#nav_list {
+    display: flex;
+    list-style: none;
+    gap: 48px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #1d1d1dad;
+    font-weight: 600;
+}
+
+.nav-item.active a {
+    color: var(--color-neutral-1);
+    border-bottom: 3px solid var(--color-primary-4);
+}
+
+#mobile_btn {
+    display: none;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+.menu-icons {
+    display: none; /* Ícones inicialmente escondidos */
+    width: 100vw; /* Largura total da tela */
+    justify-content: space-between; /* Espaça os ícones automaticamente */
+    color: var(--color-neutral-1);
+}
+
+/* Quando a classe "active" é adicionada, os ícones aparecem */
+.menu-icons.active {
+    display: block; /* Exibe os ícones */
+    font-size: 30px;
+}
+
+#container_menu{
+    height: 30px;
+    display: none;
+    justify-content: space-between;
+}
+
+.cont-balao{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    text-align: center;
+    padding: 5px; /* Pequeno ajuste para centralização melhor */
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    position: relative; /* Define como referência para posicionamento absoluto */
+    background-color: aliceblue;
+    border-radius: 100%;
+}
+
+.menu-item i {
+    font-size: 18px; /* Tamanho dos ícones */
+    margin-bottom: 5px; /* Espaço entre o ícone e o texto */
+}
+
+.menu-item span {
+    font-size: 11px; /* Texto menor abaixo do ícone */
+    line-height: 1; /* Ajusta a altura da linha para ficar mais compacto */
+}
+
+@media screen and (max-width: 1170px) {
+    #nav_list,
+    #navbar .btn-default {
+        display: none;
+    }
+
+    #nav_logo {
+        font-size: 25px;
+        width: 900px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #navbar {
+        justify-content: center; /* Centraliza verticalmente */
+    }
+
+    /* Estilo inicial dos ícones, no modo normal (sem estar ativo) */
+.menu-icons {
+    display: block; /* Ícones inicialmente escondidos */
+    font-size: 25px;
+}
+
+/* Quando a classe "active" é adicionada, os ícones aparecem */
+.menu-icons.active {
+    display: block; /* Exibe os ícones */
+    font-size: 25px;
+}
+
+#container_menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+    #mobile_btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 4;
+    }
+
+    #mobile_menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+
+    #mobile_nav_list .nav-item {
+        list-style: none;
+        text-align: center;
+    } 
+}
+
+/*Menu Bottom*/
+.bottom-menu {
+    position: fixed;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%; /* Garantir que o menu ocupe toda a largura */
+    background-color: var(--color-primary-1);
+    z-index: 1000; /* Garantir que o menu fique sobre outros elementos */
+    height: 80px;
+    border-top: 1px solid #ccc; /* Borda superior sutil, pode ajustar a cor e o tamanho */
+    bottom:0;
+}
+
+.bottom-menu a {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Alinha o ícone e o texto na vertical */
+}
+
+.fa-shopping-cart {
+    font-size: 24px; /* Tamanho do ícone */
+}
+
+.cont-balao {
+    position: absolute;
+    top: -8px;  /* Ajuste para ficar um pouco acima do ícone */
+    right: -8px; /* Ajuste para alinhar ao canto superior direito do ícone */
+    background-color: red;
+    color: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1170px) {
+    .bottom-menu {
+        display: flex;
+    }
+    .fa-shopping-cart {
+        font-size: 20px; /* Ajuste do tamanho do ícone para telas menores */
+    }
+
+    .cont-balao {
+        top: -5px; /* Ajuste para telas menores */
+        right: -5px; /* Ajuste para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .fa-shopping-cart {
+        font-size: 18px; /* Ajuste adicional para telas bem pequenas */
+    }
+
+    .cont-balao {
+        top: -4px; /* Mais ajuste para telas pequenas */
+        right: -4px; /* Mais ajuste para telas pequenas */
+    }
+}

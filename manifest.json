@@ -1,0 +1,22 @@
+{
+    "name": "Sandubalho SGP",
+    "short_name": "Sandubalho",
+    "description": "Sanduba quentinho no jeitinho!",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#fff9ea",
+    "icons": [
+      {
+        "src": "/img/icons/image192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/img/icons/image512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
